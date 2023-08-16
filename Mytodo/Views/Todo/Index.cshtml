@@ -1,0 +1,26 @@
+﻿@using Mytodo.Models
+@model MyList
+
+@{
+	ViewData ["Title"] = "ToDo List";
+}
+
+<h1>My To Do list</h1>
+
+<form>
+	<label asp-for="id">Task number</label>
+	<input asp-for="id" readonly disabled />
+	<span asp-validation-for="id"></span>
+
+	<label asp-for="Name">Task</label>
+	<input asp-for="Name" readonly disabled/>
+	<span asp-validation-for="Name"></span>
+
+	<label asp-for="IsComplite">Is Complite?</label>
+	<input asp-for="IsComplite" type="checkbox" />
+	<span asp-validation-for="Name"></span>
+	>
+</form>
+
+
+
