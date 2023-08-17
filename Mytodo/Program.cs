@@ -5,13 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-void ConfigureServices(IServiceCollection services)
-{
 
-	services.AddSingleton<ITempDataProvider, CookieTempDataProvider>();
-	services.AddSingleton<ITempDataDictionaryFactory, TempDataDictionaryFactory>();
-
-}
+builder.Services.AddMvc();
 
 builder.Services.AddEndpointsApiExplorer();
 //builder.Services.AddSwaggerGen();
